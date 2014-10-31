@@ -85,11 +85,12 @@ class Experticity(test.TestCase, object):
 
     def search_store(self, store):
         element = self.driver.find_element(By.ID, 'searchInput')
+        element.clear()
         element.send_keys(store)
         element.send_keys(Keys.RETURN)
 
     def select_store(self, store):
-        element = self.driver.find_element(By.CSS_SELECTOR, "#select_location")
+        element = self.driver.find_element(By.ID, "select_location")
         element.click()
 
     def submit_form(self):

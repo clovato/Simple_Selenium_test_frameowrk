@@ -53,10 +53,10 @@ class Test_Signup(EX):
         print"set referral type to ", referral
         EX.click_next(self)
         print("form completed without error")
-        time.sleep(3)
+        time.sleep(4)
         EX.search_store(self, store=store)
         print "found store ", store
-        time.sleep(1)
+        time.sleep(2)
         EX.select_store(self, store=store)
         print "selected store: ", store
         EX.submit_form(self)

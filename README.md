@@ -1,8 +1,8 @@
 Simple Python Browser Testing Framework README
 =====================
-you should first make sure you have python and pip installed on your system
+make sure you have python and pip installed on your system.
 
-then you will first need to install all requirements(remove sudo if in windows):
+you first need to install all the needed python packages(remove sudo if in windows):
 
 .. sourcecode:: bash
 
