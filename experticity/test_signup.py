@@ -18,7 +18,7 @@ class Test_Signup(EX):
         url = CFG.get("signup", "url")
         guid = uuid.uuid4()
         date = datetime.now().strftime(STR_FMT)
-        email = "qa.{browser}.{date}@simple_python_framework.com".format(browser=browser, date=date)
+        email = "qa.{browser}.{date}@experticity.com".format(browser=browser, date=date)
         first_name = CFG.get("signup", "first_name")
         last_name = CFG.get("signup", "last_name")
         username = "user{guid}".format(guid=guid)
@@ -42,12 +42,12 @@ class Test_Signup(EX):
         EX.user_name(self, username)
         print "set unique username: ",username
         EX.password(self, password)
-        print "setting password to ", password
+        print "setting password to: ", password
         EX.confirm(self, password)
         EX.position(self, position)
         print "set position to: ", position
         EX.hire_date(self, hiredate)
-        print "set hire date to ", hiredate
+        print "set hire date to: ", hiredate
         time.sleep(1)
         EX.referral(self, referral)
         print"set referral type to ", referral
@@ -58,7 +58,7 @@ class Test_Signup(EX):
         print "found store ", store
         time.sleep(1)
         EX.select_store(self, store=store)
-        print "selected store ", store
+        print "selected store: ", store
         EX.submit_form(self)
         time.sleep(1)
         print("submitted confirmation form")
